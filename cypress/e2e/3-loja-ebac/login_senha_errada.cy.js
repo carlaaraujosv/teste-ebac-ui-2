@@ -8,7 +8,7 @@ describe('Funcionalidade: Login', () => {
         cy.get('#password'). type ('teste@12345')
         cy.get('.woocommerce-form > .button') . click()
 
-        
+        cy.get('.woocommerce-error > li') .should ('contain' , 'Erro: A senha fornecida para o e-mail carla.teste@teste.com.br está incorreta. Perdeu a senha?' )
 
     })
 
